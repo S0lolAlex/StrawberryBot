@@ -1,5 +1,7 @@
 package org.greenSnake;
 
+import lombok.extern.log4j.Log4j;
+import lombok.extern.log4j.Log4j2;
 import lombok.extern.slf4j.Slf4j;
 import org.greenSnake.dto.UserRequest;
 import org.greenSnake.dto.UserSession;
@@ -52,7 +54,7 @@ public class StrawberryBot extends TelegramLongPollingBot {
                 dispatched = dispatcher.dispatch(userRequest);
             }
             if (!dispatched) {
-                log.debug("User write {}",update.getMessage().getText());
+                log.warn("User write {}",update.getMessage().getText());
             }
         }
     }
