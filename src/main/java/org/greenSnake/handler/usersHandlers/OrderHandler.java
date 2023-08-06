@@ -1,5 +1,6 @@
-package org.greenSnake.handler.imp;
+package org.greenSnake.handler.usersHandlers;
 
+import lombok.extern.slf4j.Slf4j;
 import org.greenSnake.dto.UserRequest;
 import org.greenSnake.dto.UserSession;
 import org.greenSnake.dto.UserSessionSaver;
@@ -13,7 +14,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
-
+@Slf4j
 @Component
 public class OrderHandler extends UserRequestHandler {
     private static String ORDER = "Статус заказа";
@@ -47,6 +48,7 @@ public class OrderHandler extends UserRequestHandler {
 
     @Override
     public void handle(UserRequest userRequest) {
+        log.info("user continious order, state {}",userRequest.getUserSession().getState());
         ConversationState state = userRequest.getUserSession().getState();
         String text = userRequest.getUpdate().getMessage().getText();
         Long userId = userRequest.getUpdate().getMessage().getFrom().getId();
@@ -56,6 +58,7 @@ public class OrderHandler extends UserRequestHandler {
             telegramService.sendMessage(userRequest.getChatId(),"Вы заказали : \n" + list.toString());
         }
         if(state.equals(ConversationState.WAITING_FOR_COUNT)){
+            log.info("user set count");
             int bushCount = Integer.parseInt(text);
             order.setBushCount(bushCount);
             orders.update(order);
@@ -66,6 +69,7 @@ public class OrderHandler extends UserRequestHandler {
                     "Напишите свой телефона для связи без кода страны");
         }
         if(state.equals(ConversationState.WAITING_FOR_PHONE)){
+            log.info("user set phone number");
             int phone = Integer.parseInt(text);
             order.setPhone(phone);
             orders.update(order);

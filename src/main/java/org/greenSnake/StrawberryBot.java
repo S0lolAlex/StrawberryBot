@@ -54,7 +54,8 @@ public class StrawberryBot extends TelegramLongPollingBot {
                 dispatched = dispatcher.dispatch(userRequest);
             }
             if (!dispatched) {
-                log.warn("User write {}",update.getMessage().getText());
+                log.warn("User write {} state {}",
+                        update.getMessage().getText(), userRequest.getUserSession().getState());
             }
         }
     }

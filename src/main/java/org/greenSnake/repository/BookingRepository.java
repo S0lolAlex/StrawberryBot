@@ -14,4 +14,6 @@ public interface BookingRepository extends JpaRepository<Booking, Long> {
     Booking getLast(Long clientId);
     @Query(nativeQuery = true,value = "select * from booking where client_id = :id")
     List<Booking> getAllByClientId(Long id);
+    @Query(nativeQuery = true,value = "select id from booking where phone = :phone")
+    Long getIdByPhone(Long phone);
 }

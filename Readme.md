@@ -34,12 +34,13 @@ Before start you must set Bot.token, Bot.username, admin.name and admin.id in ap
 
 Bot token and username it's information about your bot. You can take it from @BotFather in telegram;
 Admin name and id it's information from your telegram account;
+You can also write /help in chat and read about functions if you are admin.
 
 
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
+Aleksey Soloviov - [@Telegram](https://t.me/SoAleksey) - lesha1984231@gmail.com
 
 Project Link: [https://github.com/github_username/repo_name](https://github.com/github_username/repo_name)
 
@@ -50,12 +51,12 @@ Project Link: [https://github.com/github_username/repo_name](https://github.com/
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://github.com/kshashov/spring-boot-starter-telegram
 [product-screenshot]: images/screenshot.png
-[Spring-boot]: https://upload.wikimedia.org/wikipedia/commons/4/44/Spring_Framework_Logo_2018.svg
+[Spring-boot]: https://img.shields.io/badge/spring%20--%20-boot-green
 [Spring-url]: https://spring.io
-[H2-db]: https://upload.wikimedia.org/wikipedia/commons/archive/a/a1/20230310194612%21H2_logo.png
+[H2-db]: https://img.shields.io/badge/h2%20--%20-database-informational
 [H2-url]: https://www.h2database.com
-[TelegramBot-spring]: https://upload.wikimedia.org/wikipedia/commons/archive/8/82/20150929025725%21Telegram_logo.svg
+[TelegramBot-spring]: https://img.shields.io/badge/Spring%20--%20-TelegramBot-blue
 [TelegramBot-url]: https://github.com/kshashov/spring-boot-starter-telegram
-[flyway-js]: https://upload.wikimedia.org/wikipedia/commons/f/f3/Flyway-logo-tm.png
+[flyway-js]: https://img.shields.io/badge/-FlyWay--migrations-red
 [flyway-url]: https://flywaydb.org
 

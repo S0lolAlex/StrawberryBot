@@ -45,6 +45,10 @@ public class BookingService {
         return repository.findById(id).orElse(null);
     }
 
+    public Long getClientByPhone(Long phone){
+        return repository.getIdByPhone(phone);
+    }
+
     public void update(Booking order) {
         add(order);
     }

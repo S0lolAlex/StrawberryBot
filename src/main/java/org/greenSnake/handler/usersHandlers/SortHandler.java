@@ -1,5 +1,6 @@
-package org.greenSnake.handler.imp;
+package org.greenSnake.handler.usersHandlers;
 
+import lombok.extern.slf4j.Slf4j;
 import org.greenSnake.dto.UserRequest;
 import org.greenSnake.dto.UserSession;
 import org.greenSnake.dto.UserSessionSaver;
@@ -12,7 +13,7 @@ import org.greenSnake.services.ClientService;
 import org.greenSnake.services.StrawberryService;
 import org.greenSnake.services.TelegramService;
 import org.springframework.stereotype.Component;
-
+@Slf4j
 @Component
 public class SortHandler extends UserRequestHandler {
     private final TelegramService telegramService;
@@ -38,6 +39,7 @@ public class SortHandler extends UserRequestHandler {
 
     @Override
     public void handle(UserRequest userRequest) {
+        log.info("user set count kg");
         Client user = client.getById(userRequest.getChatId());
         String text = userRequest.getUpdate().getCallbackQuery().getData();
         if(user!=null){

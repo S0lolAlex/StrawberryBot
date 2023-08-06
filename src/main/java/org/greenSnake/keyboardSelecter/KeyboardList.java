@@ -28,7 +28,7 @@ public class KeyboardList {
                 .keyboard(List.of(row1, row2))
                 .selective(true)
                 .resizeKeyboard(true)
-                .oneTimeKeyboard(false)
+                .oneTimeKeyboard(true)
                 .build();
     }
 
